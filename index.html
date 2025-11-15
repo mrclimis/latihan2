@@ -1,141 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisata Indah | Informasi Wisata</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Override warna tombol menjadi orange -->
-    <style>
-        .cta-button {
-            background-color: orange !important;
-        }
-        .cta-button:hover {
-            background-color: #cc7a00 !important;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aplikasi Hitung Pembayaran Belanja</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<header>
+<h1>APLIKASI HITUNG PEMBAYARAN BELANJA</h1>
+</header>
 
-    <header>
-        <div class="container">
-            <h1 class="logo">Wisata Indah</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#profile">Profil</a></li>
-                    <li><a href="#tickets">Harga Tiket</a></li> 
-                    <li><a href="#locations">Lokasi Wisata</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<div class="container">
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Jelajahi Keindahan Nusantara</h2>
-            <p>Temukan destinasi tersembunyi dengan desain minimalis dan elegan.</p>
-            <a href="#locations" class="cta-button">Mulai Jelajah</a>
-        </div>
-    </section>
+    <!-- Barang Pertama -->
+    <div class="row">
+        <label>Nama Barang Pertama</label>
+        <input type="text" id="nama1" />
 
-    <section id="profile" class="section profile-section">
-        <div class="container">
-            <h2>🗺️ Profil Situs Kami</h2>
-            <p><strong>Wisata Indah</strong> didedikasikan untuk menyajikan informasi pariwisata yang akurat dan inspiratif dengan fokus pada keindahan alam dan budaya lokal. Kami percaya bahwa perencanaan perjalanan haruslah mudah dan menyenangkan, sehingga desain situs kami mengutamakan **kesederhanaan** dan **kemudahan navigasi**.</p>
-            
-            <div class="profile-details">
-                <h3>Visi Kami:</h3>
-                <p>Menjadi sumber terpercaya bagi wisatawan yang mencari pengalaman otentik dan bertanggung jawab di setiap destinasi.</p>
-            </div>
-        </div>
-    </section>
+        <label>Harga Barang</label>
+        <input type="number" id="harga1" />
 
-    <section id="tickets" class="section tickets-section">
-        <div class="container">
-            <h2>🎟️ Harga Tiket Masuk</h2>
-            <p class="intro-text">Informasi di bawah ini adalah estimasi harga tiket masuk reguler per orang untuk beberapa destinasi unggulan.</p>
+        <label>Jumlah Barang</label>
+        <input type="number" id="jumlah1" />
 
-            <table class="ticket-table">
-                <thead>
-                    <tr>
-                        <th>Destinasi</th>
-                        <th>Dewasa (WNI)</th>
-                        <th>Anak-anak (WNI)</th>
-                        <th>Turis Asing (WNA)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pantai Senja Emas</td>
-                        <td>Rp 10.000</td>
-                        <td>Rp 5.000</td>
-                        <td>Rp 50.000</td>
-                    </tr>
-                    <tr>
-                        <td>Gunung Bromo Raya</td>
-                        <td>Rp 29.000</td>
-                        <td>Rp 15.000</td>
-                        <td>Rp 220.000</td>
-                    </tr>
-                    <tr>
-                        <td>Kota Tua Peninggalan</td>
-                        <td>Gratis</td>
-                        <td>Gratis</td>
-                        <td>Gratis</td>
-                    </tr>
-                    <tr>
-                        <td>Air Terjun Pelangi</td>
-                        <td>Rp 15.000</td>
-                        <td>Rp 10.000</td>
-                        <td>Rp 75.000</td>
-                    </tr>
-                </tbody>
-            </table>
+        <label>Jumlah Harga</label>
+        <input type="text" id="total1" readonly />
+    </div>
 
-            <p class="disclaimer-text">*Harga dapat berubah sewaktu-waktu tergantung musim liburan dan kebijakan pengelola wisata.</p>
-        </div>
-    </section>
+    <!-- Barang Kedua -->
+    <div class="row">
+        <label>Nama Barang Kedua</label>
+        <input type="text" id="nama2" />
 
-    <section id="locations" class="section locations-section">
-        <div class="container">
-            <h2>🏞️ Lokasi Wisata Unggulan</h2>
-            <div class="location-grid">
-                
-                <article class="location-card">
-                    <img src="placeholder-1.jpg" alt="Contoh Pantai Indah">
-                    <h3>Pantai Senja Emas</h3>
-                    <p>Terkenal dengan pasir putih dan pemandangan matahari terbenam yang memukau. Lokasi ideal untuk bersantai.</p>
-                    <a href="#" class="details-link">Lihat Detail</a>
-                </article>
+        <label>Harga Barang</label>
+        <input type="number" id="harga2" />
 
-                <article class="location-card">
-                    <img src="placeholder-2.jpg" alt="Contoh Gunung Hijau">
-                    <h3>Gunung Bromo Raya</h3>
-                    <p>Menawarkan trekking yang menantang dengan panorama kaldera vulkanik yang megah saat fajar menyingsing.</p>
-                    <a href="#" class="details-link">Lihat Detail</a>
-                </article>
+        <label>Jumlah Barang</label>
+        <input type="number" id="jumlah2" />
 
-                <article class="location-card">
-                    <img src="placeholder-3.jpg" alt="Contoh Kota Tua Bersejarah">
-                    <h3>Kota Tua Peninggalan</h3>
-                    <p>Kawasan dengan arsitektur kolonial yang terawat, sangat cocok untuk wisata sejarah dan fotografi.</p>
-                    <a href="#" class="details-link">Lihat Detail</a>
-                </article>
+        <label>Jumlah Harga</label>
+        <input type="text" id="total2" readonly />
+    </div>
 
-            </div>
-            
-            <p class="more-info">Masih banyak lokasi menakjubkan lainnya! Jelajahi lebih lanjut.</p>
+    <div class="total-bayar">
+        <label>Total Bayar</label>
+        <input type="text" id="totalBayar" readonly />
+    </div>
 
-        </div>
-    </section>
+    <div class="button-group">
+        <button id="hitung">HITUNG PEMBAYARAN</button>
+        <button id="bersihkan">BERSIHKAN DATA</button>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Wisata Indah. All rights reserved.</p>
-        </div>
-    </footer>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>

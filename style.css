@@ -1,401 +1,87 @@
-/* GLOBAL STYLES & RESET */
-:root {
-    --primary-color: #007BFF; /* Biru elegan */
-    --secondary-color: #343A40; /* Abu-abu gelap untuk teks */
-    --background-color: #F8F9FA; /* Latar belakang terang */
-    --white: #FFFFFF;
-    --light-grey: #E9ECEF;
-    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    color: var(--secondary-color);
-    background-color: var(--background-color);
+    font-weight: bold;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-/* HEADER & NAVIGATION */
-header {
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul a {
-    color: var(--secondary-color);
-    font-weight: 500;
-    transition: color 0.3s;
-    padding: 5px 0;
-}
-
-nav ul a:hover {
-    color: var(--primary-color);
-}
-
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('placeholder-hero.jpg') no-repeat center center/cover;
-    height: 60vh; /* Ketinggian yang elegan */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--white);
-    margin-bottom: 40px;
-}
-
-.hero-content h2 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #0056b3; /* Warna lebih gelap saat hover */
-}
-
-/* GENERAL SECTION STYLES */
-.section {
-    padding: 60px 0;
-    border-bottom: 1px solid var(--light-grey);
-}
-
-.section h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    position: relative;
-    color: var(--secondary-color);
-}
-
-/* Garis bawah elegan untuk Judul Section */
-.section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: var(--primary-color);
-    margin: 10px auto 0;
-}
-
-/* PROFILE SECTION */
-.profile-section {
-    background-color: var(--white);
-    text-align: center;
-}
-
-.profile-section p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    font-size: 1.1em;
-}
-
-.profile-details {
-    margin-top: 30px;
     padding: 20px;
-    border-left: 5px solid var(--primary-color);
-    background-color: var(--light-grey);
-    display: inline-block;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* --- STYLES UNTUK HARGA TIKET SECTION (BARU) --- */
-
-.tickets-section {
-    /* Menggunakan background putih untuk kontras dengan section lain */
-    background-color: var(--white); 
-}
-
-.intro-text {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 1.1em;
-    color: var(--secondary-color);
-}
-
-.ticket-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    font-size: 1em;
-    background-color: var(--white);
-    border: 1px solid var(--light-grey);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.ticket-table th, .ticket-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid var(--light-grey);
-}
-
-.ticket-table th {
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Garis zebra striping untuk tampilan elegan dan mudah dibaca */
-.ticket-table tbody tr:nth-child(even) {
-    background-color: var(--light-grey);
-}
-
-.ticket-table tbody tr:hover {
-    background-color: #e0e0e0;
-    transition: background-color 0.3s;
-}
-
-.disclaimer-text {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #6c757d;
-    font-style: italic;
-}
-
-/* LOKASI WISATA SECTION (Grid) */
-.locations-section {
-    background-color: var(--background-color);
-}
-
-.location-grid {
+.row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan Grid */
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #fffcf2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.location-card {
-    background-color: var(--white);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.location-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.location-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.location-card h3 {
-    padding: 15px 15px 5px;
-    font-size: 1.4em;
-    color: var(--primary-color);
-}
-
-.location-card p {
-    padding: 0 15px 15px;
-    font-size: 0.95em;
-}
-
-.details-link {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    background-color: var(--light-grey);
+label {
     font-weight: bold;
-    border-top: 1px solid #dee2e6;
-    transition: background-color 0.3s;
+    color: #333;
 }
 
-.details-link:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    width: 100%;
 }
 
-.more-info {
-    text-align: center;
-    margin-top: 40px;
-    font-style: italic;
-    color: #6c757d;
+.total-bayar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* FOOTER */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
+/* Tombol Hitung */
+#hitung {
+    padding: 15px;
+    background: #fb8500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-
-/* RESPONSIBILITY (Media Queries) */
-@media (max-width: 768px) {
-    
-    /* Header/Navigasi */
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-    
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    /* Hero */
-    .hero {
-        height: 50vh;
-    }
-
-    .hero-content h2 {
-        font-size: 2.5em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    /* Section Judul */
-    .section h2 {
-        font-size: 2em;
-    }
-
-    /* Grid Lokasi */
-    .location-grid {
-        grid-template-columns: 1fr; /* Stack card pada layar kecil */
-    }
+#hitung:hover {
+    background: #ff7800;
 }
 
+/* Tombol Bersihkan (Hijau) */
+#bersihkan {
+    padding: 15px;
+    background-color: #28a745 !important; /* Hijau pasti muncul */
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#bersihkan:hover {
+    background-color: #23963f !important;
+}
+
+/* Grup Tombol */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
-    /* Responsivitas untuk Tabel Harga Tiket */
-    .ticket-table, .ticket-table thead, .ticket-table tbody, .ticket-table th, .ticket-table td, .ticket-table tr { 
-        display: block; 
-    }
-    
-    .ticket-table thead tr { 
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    
-    .ticket-table tr { 
-        border: 1px solid var(--light-grey);
-        margin-bottom: 10px;
-        border-radius: 5px;
-        overflow: hidden;
-    }
-    
-    .ticket-table td { 
-        /* Menyembunyikan label kolom, lalu membuatnya muncul sebelum data */
-        border: none;
-        border-bottom: 1px solid #eee; 
-        position: relative;
-        padding-left: 50%; 
-        text-align: right;
-    }
-    
-    .ticket-table td:before { 
-        /* Menampilkan label kolom sebagai pseudoelemen */
-        position: absolute;
-        top: 0;
-        left: 6px;
-        width: 45%; 
-        padding-right: 10px; 
-        white-space: nowrap;
-        text-align: left;
-        font-weight: bold;
-        color: var(--secondary-color);
-        padding-top: 15px;
-    }
-    
-    /* Mapping Judul Kolom ke Pseudoelemen */
-    .ticket-table tr td:nth-of-type(1):before { content: "Destinasi:"; }
-    .ticket-table tr td:nth-of-type(2):before { content: "Dewasa (WNI):"; }
-    .ticket-table tr td:nth-of-type(3):before { content: "Anak-anak (WNI):"; }
-    .ticket-table tr td:nth-of-type(4):before { content: "Turis Asing (WNA):"; }
-}
-
-@media (max-width: 480px) {
-    
-    /* Navigasi lebih ringkas */
-    nav ul li {
-        margin: 0 5px;
+    .row {
+        grid-template-columns: 1fr;
     }
 
-    nav ul a {
-        font-size: 0.9em;
-    }
-
-    /* Tombol CTA */
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9em;
+    .button-group {
+        flex-direction: column;
     }
 }
